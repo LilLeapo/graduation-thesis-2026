@@ -26,9 +26,6 @@
 \RequirePackage{xcolor}     %提供颜色支持的宏包
 \RequirePackage{listings}   %用于设置代码块样式的宏包
 \RequirePackage[style=gb7714-2015, gbnamefmt=lowercase]{biblatex}    %参考文献管理的宏包，使用GB/T 7714-2015标准
-% \RequirePackage{mathtools}%基础数学包基础上增加额外命令，通常和amsmath二选一
-% \RequirePackage{tabularx} %表格自动换行
-% \RequirePackage{multirow} %支持在表格中横跨多列
 
 \setmainfont{Times New Roman}   %设置西文字体为新罗马字体
 \setmonofont{SimHei}    %设置等宽字体为黑体（依旧邪修大法用来修改标题序号数字字体）
