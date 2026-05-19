@@ -270,7 +270,7 @@
 
 \newcommand{\makeabstract}{ %生成摘要页
     % 中文摘要页
-    \chapter*{\zihao{2}\textbf{\songti 摘 \qquad 要}}
+    \chapter*{\normalfont\zihao{2}\textbf{\songti 摘 \qquad 要}}    %\normalfont与下方作用类似
     \thispagestyle{noheader}
     \@cabstractcn
 
