@@ -78,7 +78,7 @@
     contentsname={目\quad 录},  % 目录的标题 
     secnumdepth=3,  % 标题编号深度
     chapter={
-        format={\centering\zihao{-3}\heiti},    % 小三，黑体，居中
+        format={\centering\zihao{-3}\heiti\ttfamily\CJKfamily{hei}},    % 小三，黑体，居中多出来的是为了解决中英混排的问题）
         number={\chinese{chapter}}, % 章节编号黑体中文数字
         name={第,章},   % 章前后缀
         aftername=\quad, 
@@ -86,21 +86,21 @@
         afterskip=30bp,     % 段后间距 （规定 30~36 bp 之间）
     },
     section={
-        format={\zihao{4}\heiti},   % 四号黑体
+        format={\zihao{4}\heiti\ttfamily\CJKfamily{hei}},   % 四号黑体（
         numberformat={\zihao{4}\ttfamily},   % 邪修大法之章节编号数字使用黑体
         beforeskip=20bp,    % 段前间距 （规定 18~24 bp 之间）
         afterskip=20bp,     % 段后间距 （规定 18~24 bp 之间）
         aftername=\quad,    % 编号与标题之间空格
     },
     subsection={
-        format={\zihao{4}\heiti},   % 四号黑体
+        format={\zihao{4}\heiti\ttfamily\CJKfamily{hei}},   % 四号黑体
         numberformat={\zihao{4}\ttfamily}, 
         beforeskip=12bp,    % 段前间距 （规定 12~15 bp 之间）
         afterskip=12bp,     % 段后间距 （规定 12~15 bp 之间）
         aftername=\quad,
     },
     subsubsection={ %单纯为了附录才有这个格式的设置
-        format={\zihao{4}\heiti},   % 四号黑体
+        format={\zihao{4}\heiti\ttfamily\CJKfamily{hei}},   % 四号黑体
         numberformat={\zihao{4}\ttfamily}, 
         beforeskip=12bp,    % 段前间距 （规定 12~15 bp 之间）
         afterskip=12bp,     % 段后间距 （规定 12~15 bp 之间）
@@ -114,17 +114,34 @@
     [0em]   % 缩进为 0em = 0 字符
     {\heiti\zihao{-4}\setlength{\baselineskip}{1.2\baselineskip}}   %黑体小四，行距1.2倍（这里是latex的行距）
     {\thecontentslabel\quad}{}
-    {\hspace{.5em}\titlerule*[5bp]{.}\zihao{-4}\contentspage}
+    {\titlerule*[5bp]{$\cdot$}\zihao{-4}\contentspage}
 \titlecontents{section}
     [2em]   % 缩进为 2em = 4 字符
     {\zihao{-4}\setlength{\baselineskip}{1.2\baselineskip}}
-    {\ttfamily\thecontentslabel\quad}{} %二级及以下层级标题序号为黑体
-    {\hspace{.5em}\titlerule*[5bp]{.}\zihao{-4}\contentspage}
+    {\thecontentslabel\quad}{} %二级及以下层级标题序号为黑体
+    {\titlerule*[5bp]{$\cdot$}\zihao{-4}\contentspage}
 \titlecontents{subsection}
     [4em]   % 缩进为 4em = 4 字符
     {\zihao{-4}\setlength{\baselineskip}{1.2\baselineskip}}
-    {\ttfamily\thecontentslabel\quad}{}
-    {\hspace{.5em}\titlerule*[5bp]{.}\zihao{-4}\contentspage}
+    {\thecontentslabel\quad}{}
+    {\titlerule*[5bp]{$\cdot$}\zihao{-4}\contentspage}
+
+%为什么这里会有一段多出来的代码呢，当然是因为学校的word模板太难绷了，如果你使用早些时候的模板并且没有更新过目录，那么目录的二级及以下标题的西文字符使用的都是新罗马字体，但是如果你更新了目录，他就给你变成了黑体，但是此时页码却还是新罗马，到底闹哪样？总之按照其更新前的格式排版已经通过了格式检测系统，上面默认的代码就是那个，要是想用难绷的黑体，下面的代码我也搓出来了。。。
+% \titlecontents{chapter}
+%     [0em]   % 缩进为 0em = 0 字符
+%     {\heiti\zihao{-4}\setlength{\baselineskip}{1.2\baselineskip}}   %黑体小四，行距1.2倍（这里是latex的行距）
+%     {\thecontentslabel\quad}{}
+%     {\titlerule*[5bp]{$\cdot$}\zihao{-4}\contentspage}
+% \titlecontents{section}
+%     [2em]   % 缩进为 2em = 4 字符
+%     {\zihao{-4}\setlength{\baselineskip}{1.2\baselineskip}}
+%     {\ttfamily\thecontentslabel\quad}{} %二级及以下层级标题序号为黑体
+%     {\titlerule*[5bp]{$\cdot$}\zihao{-4}\contentspage}
+% \titlecontents{subsection}
+%     [4em]   % 缩进为 4em = 4 字符
+%     {\zihao{-4}\setlength{\baselineskip}{1.2\baselineskip}}
+%     {\ttfamily\thecontentslabel\quad}{}
+%     {\titlerule*[5bp]{$\cdot$}\zihao{-4}\contentspage}
 
 \renewcommand{\tablename}{表}                                     % 插表题头
 \renewcommand{\figurename}{图}                                    % 插图题头
