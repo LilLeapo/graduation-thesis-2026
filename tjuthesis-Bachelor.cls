@@ -280,7 +280,7 @@
     \@ckeywordcn
 
     % 英文摘要页
-    \chapter*{\zihao{2}\textbf{ABSTRACT}}
+    \chapter*{\normalfont\zihao{2}\textbf{ABSTRACT}}    %摘要使用的是无编号章节标题格式，但是需要使用新罗马字体故手动改回
     \thispagestyle{noheader}
     \@cabstracten
 
