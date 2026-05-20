@@ -38,9 +38,9 @@
 
 \if@songnumber
     \setsansfont{SimSun} %邪修大法修改参考文件序号为宋体之定义无衬线字体为宋体
-    \DeclareFieldFormat{labelnumberwidth}{
-    {\sffamily\mkbibbrackets{#1}}   %使用自定义的无衬线字体命令
-    } %邪修大法修改参考文件序号为宋体之使用无衬线字体命令
+    \DeclareFieldFormat{labelnumberwidth}{%
+        {\sffamily[\rmfamily #1\sffamily]}%
+    } %中括号用宋体（\sffamily 已映射至 SimSun），中括号内的数字用 Times New Roman（\rmfamily）
 \fi
 
 % 宋体、黑体伪粗体
