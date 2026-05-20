@@ -249,7 +249,7 @@
         \includegraphics[width=0.4\textwidth]{tjulogo.eps} %插入天津大学校徽
 
         \vspace{20pt}
-        \zihao{3}{\heitibf{题目：\@ctitle}}
+        {\zihao{-3}\heitibf{题目：\@ctitle}}
 
         \vspace{30pt}
         \renewcommand{\arraystretch}{1.5} %设置表格行高1.5倍
