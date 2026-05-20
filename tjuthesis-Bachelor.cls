@@ -202,6 +202,11 @@
 
 \addbibresource{reference.bib} %添加参考文献数据库文件
 
+% 强制参考文献条目里的 ASCII（数字、英文）走 Times New Roman，
+% 避免 biblatex/gb7714-2015 在中文条目里把数字（如 2023, 20(6)）落到 SimSun 的 WinAnsi 字形。
+\newfontfamily\bibrmfont{Times New Roman}
+\renewcommand*{\bibfont}{\bibrmfont}
+
 \lstset{ %一个简单的代码高亮样式设置
     basicstyle=\ttfamily\small,
     numbers=left,
