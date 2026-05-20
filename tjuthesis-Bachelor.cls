@@ -30,6 +30,12 @@
 \setmainfont{Times New Roman}   %设置西文字体为新罗马字体
 \setmonofont{SimHei}    %设置等宽字体为黑体（依旧邪修大法用来修改标题序号数字字体）
 
+% 覆盖 ctexbook 的默认 CJK 主字体：强制使用 SimSun（学校规范字体），
+% 避免在 macOS 下默认走 STSong（华文宋体）触发格式检查报错。
+% SimSun 已确认在用户字体目录下。
+\setCJKmainfont{SimSun}[AutoFakeBold=2]
+\setCJKsansfont{SimHei}[AutoFakeBold=2]
+
 \if@songnumber
     \setsansfont{SimSun} %邪修大法修改参考文件序号为宋体之定义无衬线字体为宋体
     \DeclareFieldFormat{labelnumberwidth}{
