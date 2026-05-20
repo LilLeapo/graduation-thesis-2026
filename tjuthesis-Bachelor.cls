@@ -303,7 +303,7 @@
     \setcounter{table}{0}
     \setcounter{equation}{0}
     \setcounter{lstlisting}{0}
-    \def\thesection{\heiti{附录}\Alph{section}}
+    \def\thesection{\songti\bfseries 附录\Alph{section}}
     \def\thesubsection{\Alph{section}.\arabic{subsection}}
     \def\thesubsubsection{\Alph{section}.\arabic{subsection}.\arabic{subsubsection}}
     \def\thefigure{\Alph{section}\ifnum\value{figure}<10 0\fi\arabic{figure}}
@@ -314,5 +314,14 @@
     \@addtoreset{table}{section}
     \@addtoreset{equation}{section}
     \@addtoreset{lstlisting}{section}
+    % 附录内的各级标题改用宋体加粗（符合学校规范，不再沿用正文章节的黑体）
+    \ctexset{
+        section/format={\zihao{4}\songti\bfseries},
+        section/numberformat={\zihao{4}\songti\bfseries},
+        subsection/format={\zihao{4}\songti\bfseries},
+        subsection/numberformat={\zihao{4}\songti\bfseries},
+        subsubsection/format={\zihao{4}\songti\bfseries},
+        subsubsection/numberformat={\zihao{4}\songti\bfseries}
+    }
 }{}
 
